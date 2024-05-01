@@ -1,3 +1,13 @@
+fetch("https://jsonplaceholder.typicode.com/todos")
+  .then(response => response.json())
+  .then(result => {
+    result.forEach( todo => {
+      console.log(todo.title);
+    })
+ 
+  })
+  .catch(error => console.error(error));
+
 document.addEventListener("DOMContentLoaded", () => {
   // Get references to the necessary DOM elements
   const taskInput = document.getElementById("taskInput");
